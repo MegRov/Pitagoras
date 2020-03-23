@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style type="text/css">
+@font-face {
+font-family: calc;
+src: url(calc.ttf);}
+select {font-size:18px;height: 30px;padding:0px;margin: 0px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;-moz-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;background:linear-gradient(#342E21,#483F2E);color:rgba(0,0,0,1.00);border:none;display: inline-block;cursor:pointer;}
+input{color: #fff}
+select:not(:checked) { background-color:rgb(116, 106, 85);color:#fff;}
+input[type=number]::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0;}
+input[type=number] {-moz-appearance:textfield;}
+hr {border: 1px dotted #fff;}
+.txtre2nd{font-family: calc; width: 20%;font-size:18px;height: 30px;padding:0px;margin: 0px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;-moz-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;background:linear-gradient(#342E21,#483F2E); color:rgba(255,255,255,1.00);border:none;display: inline-block;}
+select {width: 60%;font-size:18px;height: 30px;padding:0px;margin: 0px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;-moz-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;background:linear-gradient(#342E21,#483F2E);color:rgba(0,0,0,1.00);border:none;display: inline-block;cursor:pointer;}
+.calculapitagoras{border-radius:12px; background:rgb(161, 217, 255);}
+.txtr1{font-family: calc; width: 60%;font-size:18px;height: 30px;padding:0px;margin: 0px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;-moz-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;background:linear-gradient(#342E21,#483F2E); color:rgba(255,255,255,1.00);border:none;display: inline-block;}
+.txtr{font-family: calc; width: 40%;font-size:18px;height: 30px;padding:0px;margin: 0px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;-moz-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;background:linear-gradient(#342E21,#483F2E); color:rgba(255,255,255,1.00);border:none;display: inline-block;}
+@media screen and (min-width : 0px ) and (max-width : 450px){
+select{ width:55%;}
+.txtre2nd{width: 40%;}
+.txtr{width:100%;}}
+@media screen and (min-width : 0px ) and (max-width : 300px){
+select{ width:60%;}
+.txtre2nd{width: 50%;}
+.txtr{width:100%;}}
+body {
+  background: lightblue url("https://previews.123rf.com/images/9george/9george1608/9george160800376/61775923-matem%C3%A1ticas-lineal-c%C3%ADrculo-de-la-educaci%C3%B3n-matem%C3%A1tica-de-fondo-con-parcelas-geom%C3%A9tricas-f%C3%B3rmulas-y-calculations-de.jpg") no-repeat fixed center;
+}
+</style>
+<script type="text/javascript">
+function re2nd() {
+    var n = document.calculator.re2nd.value;
+    switch(n){
+    case "0":
+    document.calculator.txtresultado.value=Math.round(document.calculator.txtresultado.value);
+    break;
+    case "1":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 10) / 10);
+    break;
+    case "2":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 100) / 100);
+    break;
+    case "3":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 1000) / 1000);
+    break;
+    case "4":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 10000) / 10000);
+    break;
+    case "5":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 100000) / 100000);
+    break;
+    case "6":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 1000000) / 1000000);
+    break;
+    case "7":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 10000000) / 10000000);
+    break;
+    case "8":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 100000000) / 100000000);
+    break;
+    case "9":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 1000000000) / 1000000000);
+    break;
+    case "10":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 10000000000) / 10000000000);
+    break;
+    case "11":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 100000000000) / 100000000000);
+    break;
+    case "12":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 1000000000000) / 1000000000000);
+    break;
+    case "13":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 10000000000000) / 10000000000000);
+    break;
+    case "14":
+    document.calculator.txtresultado.value=(Math.round(document.calculator.txtresultado.value * 100000000000000) / 100000000000000);
+    break;
+  }
+}
+   function limpiar(){
+     navigator.vibrate([50, 250]);
+     document.calculator.txtnum1.value="";
+     document.calculator.txtnum2.value="";
+     document.calculator.txtresultado.value="";
+     document.getElementById("lblnum1").innerHTML="";
+   }
+    function pitagoras(){
+	  	var y = document.getElementById("seleccion").options;
+      var x = document.getElementById("seleccion").selectedIndex;
+	    var n1=document.calculator.txtnum1.value;
+    	var n2=document.calculator.txtnum2.value;
+      navigator.vibrate([50, 250]);
+	switch (y[x].index){
+	case 0:
+	    potencia2=Math.pow(n2,2)-(Math.pow(n1,2));
+    	resultado=Math.sqrt(potencia2);
+	    document.calculator.txtresultado.value=resultado;
+      re2nd();
+      if((n1=="")||(n2=="")){
+        alert("por favor llena los campos de texto");
+        limpiar();
+      }
+		break;
+	case 1:
+	    potencia2=Math.pow(n1,2)-(Math.pow(n2,2));
+    	resultado=Math.sqrt(potencia2);
+	    document.calculator.txtresultado.value=resultado;
+      re2nd();
+      if((n1=="")||(n2=="")){
+        alert("por favor llena los campos de texto");
+        limpiar();
+      }
+		 break;
+	case 2:
+	    potencia2=Math.pow(n1,2)+(Math.pow(n2,2));
+    	resultado=Math.sqrt(potencia2);
+	    document.calculator.txtresultado.value=resultado;
+      re2nd();
+      if((n1=="")||(n2=="")){
+        alert("por favor llena los campos de texto");
+        limpiar();
+      }
+		break;
+		}}
+function texto() {
+  document.getElementById("re2nd").selectedIndex=2;
+        navigator.vibrate([50, 250]);
+        var y = document.getElementById("seleccion").options;
+        var x = document.getElementById("seleccion").selectedIndex;
+     switch (y[x].index){
+        case 0:
+		document.getElementById("demo1").innerHTML="Cateto b:";
+        document.getElementById("demo2").innerHTML="Hipotenusa c:";
+		document.getElementById("demo3").innerHTML="Cateto a:";
+        break;
+        case 1:
+      document.getElementById("demo1").innerHTML="Hipotenusa c:";
+        document.getElementById("demo2").innerHTML="Cateto a:";
+		document.getElementById("demo3").innerHTML="Cateto b:";
+        break;
+        case 2:
+        document.getElementById("demo1").innerHTML="Cateto a:";
+        document.getElementById("demo2").innerHTML="Cateto b:";
+		document.getElementById("demo3").innerHTML="Hipotenusa c:";
+		break;
+}}
+function operaciones() {
+           var y = document.getElementById("seleccion").options;
+           var x = document.getElementById("seleccion").selectedIndex;
+           var n1=document.calculator.txtnum1.value;
+           var n2=document.calculator.txtnum2.value;
+           var n3=document.calculator.txtresultado.value;
+        switch (y[x].index){
+           case 0:
+           if(parseInt(n1) < parseInt(n2)) {
+          document.getElementById("lblnum1").innerHTML=
+           "<b>Procedimiento</b><br>"+
+           "a<sup>2</sup>"+" = "+n1+"<sup>2</sup>" +" - "+ n2+"<sup>2</sup><br>"+
+           "a<sup>2</sup>"+ " = " + Math.pow(n1,2)+" - "+Math.pow(n2,2)+"<br>"+
+           "a<sup>2</sup>" + " = " + (Math.pow(n2,2)-Math.pow(n1,2)) + "<br>"+
+           "a"+ " = " +"√  "+"(" + (Math.pow(n2,2)-Math.pow(n1,2)) + ")" + "<br>"+
+           "<span class='alert alert-success w-auto p-1 rounded shadow-lg my-3');'>" + "a" + " = " +
+           (Math.sqrt(Math.pow(n2,2)-Math.pow(n1,2))) +"</span>";
+         }
+           if (parseInt(n1) >= parseInt(n2)) {
+             alert("La hipoteusa debe de ser mas grande y no deben ser iguales");
+           limpiar();
+         }
+           break;
+           //b2=c2-a2
+           case 1:
+           if(parseInt(n1) > parseInt(n2)){
+          document.getElementById("lblnum1").innerHTML=
+           "<b>Procedimiento</b><br>"+
+           "b<sup>2</sup>"+" = "+n1+"<sup>2</sup>" +" - "+ n2+ "<sup>2</sup><br>"+
+           "b<sup>2</sup>"+ " = " + Math.pow(n1,2) +" - " + Math.pow(n2,2)+"<br>"+
+           "b<sup>2</sup>" + " = " + (Math.pow(n1,2)-Math.pow(n2,2)) + "<br>"+
+           "b"+ " = " +"√ "+"(" + (Math.pow(n1,2)-Math.pow(n2,2)) + ")" + "<br>"+
+            "<span class='alert alert-success w-auto p-1 rounded shadow-lg my-3'>"+"b" + " = " +  (Math.sqrt(Math.pow(n1,2)-Math.pow(n2,2)))+"</span>";
+          }
+          if(parseInt(n1) <= parseInt(n2)){
+            alert("La hipoteusa debe de ser mas grande y no deben ser iguales");
+            limpiar();
+          }
+           break;
+           case 2:
+           if(parseInt(n1) , parseInt(n2)){
+          document.getElementById("lblnum1").innerHTML=
+           "<b>Procedimiento:</b><br>"+
+           "c<sup>2</sup>"+" = "+n1+"<sup>2</sup>" +" + "+ n2+"<sup>2</sup><br>"+
+           "c<sup>2</sup>"+ " = " + Math.pow(n1,2)+" + "+Math.pow(n2,2)+"<br>"+
+           "c<sup>2</sup>" + " = " + (Math.pow(n2,2)+Math.pow(n1,2)) + "<br>"+
+           "c"+ " = " +"√ "+"(" + (Math.pow(n2,2)+Math.pow(n1,2)) + ")" + "<br>"+
+           "<span class='alert alert-success w-auto p-1 rounded shadow-lg my-3'>" + "c" + " = " +
+           (Math.sqrt(Math.pow(n2,2)+Math.pow(n1,2)))+"</span>";}
+      break;
+   }}
+</script>
+<link href="estilo.css" rel="stylesheet" type="text/css"/>
+<title>Teorema de pitagoras</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<!--  Chrome, Firefox OS y Opera  -->
+ <meta name="theme-color" content="#2CBBDF"/>
+ 
+</head>
+<body onload="texto();">
+<div class="panelizq">
+  <div class="investigacion">
+ 
+
+<p></p>
+<div class="informacion">
+  <div class="investigacion">
+    <div class="container col-lg-6 ">
+
+      <h1 class="text-center alert alert-success">Proyecto matemáticas</h1>
+      <h2 class="text-center bg-info rounded shadow-lg">Profesora: Maria Josefina Huertas Davila </h2>
+    </div>
+      
+  
+    <form name="calculator" class="calculapitagoras container text-center col-lg-6 col-md-6 shadow-lg">
+                <div class="investigacion">
+                <br>
+                <h1 class="">Calculadora Pitágoras</h1>
+                
+                <span style="color: #fff; font-family:calc; font-size:18px;"></span>
+            ¿Que lado quieres calcular?<br>
+            <select id="seleccion" class="text-center" onchange="texto();">
+            <option class="text-center">Cateto a</option>
+            <option class="text-center">Cateto b</option>
+            <option class="text-center">Hipotenusa c</option>
+            </select>
+            <br><br>
+            ¿Cuantos decimales desea redondear?<br>
+            <input class="txtre2nd text-center shadow-lg" placeholder="max 14 min 0" title="max 14 min 0" maxlength="2" value="2" id="re2nd" onchange="re2nd();">
+            <br><br>
+            <label id="demo1"></label>
+            <br>
+            <input class="txtr text-center shadow-lg" type="number" name="txtnum1" autocomplete="off">
+            <br><br>
+            <label id="demo2"></label>
+            <br>
+            <input class="txtr text-center shadow-lg" type="number"  name="txtnum2" autocomplete="off">
+            <br><br>
+            <input type="button" class="btn btn-primary" value="Calcular" onClick="pitagoras();operaciones();">
+            <input type="button" class="btn btn-primary" value="Limpiar" onClick="limpiar()">
+            <br>
+           
+            <label id="demo3"></label>
+            <br>
+            <input class="txtr1 text-center shadow-lg" type="number" autocomplete="off" name="txtresultado">
+            <br>
+              
+            <label id="lblnum1">
+            </label>
+            </span>
+            </div>
+            <br>
+     </form>
+  </div>
+  <br>
+</div>
+<div class="container col-lg-6 col-md-6">
+
+  <footer class="alert alert-warning shadow-lg">Elaborado por: Luis Miguel Guevara Vergara- programacion de software</footer>
+</div>
+
+
+</body>
+</html>
