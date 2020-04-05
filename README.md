@@ -33,6 +33,6 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 ## Vista del proyecto
 
-![vista](img/vista.jpg)
+![vista](Pitagoras/img/vista.jpg)
 * [www.pitagoras.com](http://pitagoras.tonohost.com/teorema_pitagoras.html) - Url del proyecto
 
